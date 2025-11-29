@@ -45,7 +45,7 @@ local function PlacePainting()
     lib.requestModel(PaintingModel)
 
     local StartOffset = GetEntityCoords(PlayerPed) + GetEntityForwardVector(PlayerPed) * 2
-    local PaintingEntity = CreateObject(PaintingModel, StartOffset.x, StartOffset.y, StartOffset.z, false, false, false)
+    local PaintingEntity = CreateObjectNoOffset(PaintingModel, StartOffset.x, StartOffset.y, StartOffset.z, false, false, false)
 
     local GizmoData = exports['object_gizmo']:useGizmo(PaintingEntity)
 
