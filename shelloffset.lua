@@ -66,10 +66,10 @@ end
 
 RegisterCommand('shelloffset', function(_, args)
     local ShellName = args[1]
-    if not ShellName then exports['mani-bridge']:Notify(locale('Notify.Failed'), locale('Notify.InvalidArgument'), 'error', 5000) return end
+    if not ShellName then exports['mani-bridge']:Notify('Failed', 'Invalid Argument', 'error', 5000) return end
     local ShellModel = GetHashKey(ShellName)
 
-    if not IsModelInCdimage(ShellModel) then exports['mani-bridge']:Notify(locale('Notify.Failed'), locale('Notify.InvalidArgument'), 'error', 5000) return end
+    if not IsModelInCdimage(ShellModel) then exports['mani-bridge']:Notify('Failed', 'Invalid Argument', 'error', 5000) return end
 
     if next(ShellCache) then ClearCache() end
 
