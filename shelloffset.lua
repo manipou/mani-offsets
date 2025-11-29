@@ -29,7 +29,7 @@ local function CopyCoords()
 
     local X = string.format("%.2f", Offset.x)
     local Y = string.format("%.2f", Offset.y)
-    local Z = string.format("%.2f", (Offset.z -1))
+    local Z = string.format("%.2f", (Offset.z))
     local W = string.format("%.2f", Heading)
     
     lib.setClipboard(('vec4(%s, %s, %s, %s)'):format(X, Y, Z, W))
